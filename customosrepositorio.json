@@ -1,15 +1,21 @@
 [
     {
-        "windows_version": "Windows 10 Ghost Spectre",
+        "windows_version": "Windows XP",
         "architectures": {
-            "x64": "https://example.com/windows10_ghost_spectre_x64.iso",
-            "x86": "https://example.com/windows10_ghost_spectre_x86.iso"
+            "x86": "https://example.com/windowsxp_x86.iso"
         }
     },
     {
-        "windows_version": "Windows 11 Ghost Spectre",
+        "windows_version": "Windows Server 2003",
         "architectures": {
-            "x64": "https://example.com/windows11_x64.iso"
+            "x64": "https://example.com/windowsserver2003_x64.iso",
+            "x86": "https://example.com/windowsserver2003_x86.iso"
+        }
+    },
+    {
+        "windows_version": "Windows 98",
+        "architectures": {
+            "x86": "https://example.com/windows98_x86.iso"
         }
     }
 ]
