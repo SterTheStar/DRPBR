@@ -9,7 +9,7 @@
     {
         "windows_version": "Windows 11 Ghost Spectre",
         "architectures": {
-            "x64": "https://example.com/windows11_x64.iso",
+            "x64": "https://example.com/windows11_x64.iso"
         }
     }
 ]
