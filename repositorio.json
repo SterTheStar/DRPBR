@@ -5,13 +5,13 @@
             {
                 "architecture": "x64",
                 "versions": {
-                    "SP2 VL": "https://drive.massgrave.dev/en_win_xp_pro_x64_with_sp2_vl_x13-41611.iso"
+                    "SP2": "https://drive.massgrave.dev/en_win_xp_pro_x64_with_sp2_vl_x13-41611.iso"
                 }
             },
             {
                 "architecture": "x86",
                 "versions": {
-                    "SP3 VL": "https://drive.massgrave.dev/en_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-73974.iso"
+                    "SP3": "https://drive.massgrave.dev/en_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-73974.iso"
                 }
             }
         ]
