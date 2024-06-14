@@ -6,14 +6,12 @@
                 "architecture": "x64",
                 "versions": {
                     "SP1": "https://example.com/en_windows_7_professional_with_sp1_x64_dvd_u_676939.iso",
-                    "SP2": "https://example.com/en_windows_7_professional_with_sp2_x64_dvd_342267.iso"
                 }
             },
             {
                 "architecture": "x86",
                 "versions": {
                     "SP1": "https://example.com/en_windows_7_professional_with_sp1_x86_dvd_u_677056.iso",
-                    "SP2": "https://example.com/en_windows_7_professional_with_sp2_x86_dvd_342266.iso"
                 }
             }
         ]
