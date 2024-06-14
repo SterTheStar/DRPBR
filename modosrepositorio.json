@@ -20,5 +20,16 @@
                 }
             }
         ]
+    },
+    {
+        "windows_version": "Windows 11 Ghost Spectre",
+        "editions": [
+            {
+                "architecture": "x64",
+                "versions": {
+                    "23H2": "https://download2388.mediafire.com/qnuk9acxv7ygxmhyUqfPa7Zmwi5BrL8GJ7xIyEeHLFK8qhOSFdPZT0TZ1omi-IG-Az03wf19fC9geeXTjDgpaSQ8b75ErCk2if09PgI-XJ8EHCiP4oj9MqRDnfAtTkawM_wG61rNKBQIjqjXMUzblN-4EppRrlW4RKVyRn_Tdr1isw/oo21gjakbvxvowl/WIN11.PRO.23H2.S-SE-C.U3.X64.%28WPE%2B%29+xerifetech.com.zip"
+                }
+            }
+        ]
     }
 ]
