@@ -1,11 +1,12 @@
 [
     {
-        "windows_version": "Windows 7 SunValley",
+        "windows_version": "Windows 7",
         "editions": [
             {
                 "architecture": "x64",
                 "versions": {
                     "SP1": "https://drive.massgrave.dev/en_windows_7_professional_with_sp1_x64_dvd_u_676939.iso",
+                    "SP2": "https://drive.massgrave.dev/en_windows_7_professional_with_sp2_x64_dvd_342267.iso"
                 }
             },
             {
@@ -18,7 +19,24 @@
         ]
     },
     {
-        "windows_version": "Windows 10 Ghost Spectre",
+        "windows_version": "Windows 8",
+        "editions": [
+            {
+                "architecture": "x64",
+                "versions": {
+                    "": "https://archive.org/download/HRMCCSAX64FREPTBRDV5/HRM_CCSA_X64FRE_PT-BR_DV5.ISO"
+                }
+            },
+            {
+                "architecture": "x86",
+                "versions": {
+                    "": "https://archive.org/download/HRMCCSAX64FREPTBRDV5/HRM_CCSA_X86FRE_PT-BR_DV5.ISO"
+                }
+            }
+        ]
+    },
+    {
+        "windows_version": "Windows 10",
         "editions": [
             {
                 "architecture": "x64",
@@ -41,7 +59,7 @@
         ]
     },
     {
-        "windows_version": "Windows 11 Ghost Spectre",
+        "windows_version": "Windows 11",
         "editions": [
             {
                 "architecture": "x64",
