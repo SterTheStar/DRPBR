@@ -30,7 +30,7 @@
     {
         "windows_version": "Windows 10",
         "architectures": {
-            "x64": "https://example.com/windows10_x64.iso",
+            "x64": "https://dw.uptodown.net/dwn/q35olBVO7eVEuA8NPKjmERLxfGbKU1y1NW6P3Iv7bVtOjW2dqYoYQblDa8GpaJ5xhSJp1CZsFb8wmKxFGu43bc2FQKEesL_Js0WBh26P26vZSPy7qcY-HPmYNYIk6uqi/4-zKnPl8GHCr-ln-dNAe83HLxyfL0ipiTJR_xJQEul-hwUeo2fKYX_pKUwFl1MFFnHgXXortoe-KFvYaqAx5aZ5zt0teWtCX5W3f7dZv8LTqc52mbE5AmOqdw3YqlFYF/ZLULwdBCAJadcoxMCfeoKH-zebQovdFoSd3RkycBXZVO5x-yYSsohIusOxlsBerweSfxvubYxfmXE1GOY5iPHoOC_GT3wW_0c9uqFxSILuM=/windows-10-22h2-build-19041.iso",
             "x86": "https://example.com/windows10_x86.iso",
             "ARM": "https://example.com/windows10_arm.iso"
         }
@@ -44,8 +44,7 @@
     {
         "windows_version": "Windows 11",
         "architectures": {
-            "x64": "https://example.com/windows11_x64.iso",
-            "x86": "https://example.com/windows11_x86.iso",
+            "x64": "https://dw.uptodown.net/dwn/q35olBVO7eVEuA8NPKjmERLxfGbKU1y1NW6P3Iv7bVvsXU03jMcq3ezs3cPYKLpcmzQDgNHeBSGrlgKuM8YE1m2Q2q796Gj1sJg0UsL643q3yKRXWOE4LcWdwvsDynjf/gVYQjlmnEcTq0PLxtkJ6ybKLKGhmxqKMYBYnRTnkUcy52Vg14TuIh1loEufqxt_Yx36DZRvQWygv5goyL0wSCn-gjSTjORRjjpZ8WLB2CL2W_CX6en2kvq-lofjmnSUZ/041K2fFBIu106xSfo9sYs3JUJnzOQL9jBfOwrR24wwct82jn0BfAG-epz8nQKK9yscagnWgAI7kTcehrG_NNCg==/windows-11-23h2.iso",
             "ARM": "https://example.com/windows11_arm.iso"
         }
     }
