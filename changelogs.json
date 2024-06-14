@@ -1,7 +1,7 @@
 {
     "DevTest": {
-      "version": "1.0",
-      "date": "2023-01-01",
+      "version": "Dev Version",
+      "date": "Dev Date",
       "changes": [
         "Initial release.",
         "Added feature A.",
@@ -10,13 +10,13 @@
       "show_changelog": false
     },
     "1.1": {
-      "version": "1.1",
-      "date": "2023-02-15",
+      "version": "1.0",
+      "date": "2023-06-14",
       "changes": [
-        "Added feature B.",
-        "Improved performance."
+        "Added Custom OS.",
+        "Improved interface."
       ],
-      "show_changelog": false
+      "show_changelog": true
     }
   }
   
