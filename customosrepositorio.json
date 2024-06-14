@@ -1,52 +1,16 @@
 [
     {
-        "windows_version": "Windows 7",
+        "windows_version": "Windows 10 Ghost Spectre",
         "architectures": {
-            "x64": "https://example.com/windows7_x64.iso",
-            "x86": "https://example.com/windows7_x86.iso"
-        }
-    },
-    {
-        "windows_version": "Windows Vista",
-        "architectures": {
-            "x64": "https://example.com/windowsvista_x64.iso",
-            "x86": "https://example.com/windowsvista_x86.iso"
-        }
-    },
-    {
-        "windows_version": "Windows 8",
-        "architectures": {
-            "x64": "https://example.com/windows8_x64.iso",
-            "x86": "https://example.com/windows8_x86.iso"
-        }
-    },
-    {
-        "windows_version": "Windows 8.1",
-        "architectures": {
-            "x64": "https://example.com/windows81_x64.iso",
-            "x86": "https://example.com/windows81_x86.iso"
-        }
-    },
-    {
-        "windows_version": "Windows 10",
-        "architectures": {
-            "x64": "https://example.com/windows10_x64.iso",
-            "x86": "https://example.com/windows10_x86.iso",
-            "ARM": "https://example.com/windows10_arm.iso"
-        }
-    },
-    {
-        "windows_version": "Windows 10X",
-        "architectures": {
-            "VirtualDisk HyperV": "https://example.com/windows10x_virtualdisk.iso"
+            "x64": "https://example.com/windows10_ghost_spectre_x64.iso",
+            "x86": "https://example.com/windows10_ghost_spectre_x86.iso"
         }
     },
     {
         "windows_version": "Windows 11",
         "architectures": {
             "x64": "https://example.com/windows11_x64.iso",
-            "x86": "https://example.com/windows11_x86.iso",
-            "ARM": "https://example.com/windows11_arm.iso"
+            "x86": "https://example.com/windows11_x86.iso"
         }
     }
 ]
