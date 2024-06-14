@@ -1,5 +1,16 @@
 [
     {
+        "windows_version": "Windows XP",
+        "editions": [
+            {
+                "architecture": "x64",
+                "versions": {
+                    "SP2 VL": "https://drive.massgrave.dev/en_win_xp_pro_x64_with_sp2_vl_x13-41611.iso"
+                }
+            }
+        ]
+    },
+    {
         "windows_version": "Windows 7 Sun Valley",
         "editions": [
             {
