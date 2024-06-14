@@ -1,51 +1,78 @@
 [
     {
         "windows_version": "Windows 7",
-        "architectures": {
-            "x64": "https://example.com/windows7_x64.iso",
-            "x86": "https://example.com/windows7_x86.iso"
-        }
-    },
-    {
-        "windows_version": "Windows Vista",
-        "architectures": {
-            "x64": "https://example.com/windowsvista_x64.iso",
-            "x86": "https://example.com/windowsvista_x86.iso"
-        }
+        "editions": [
+            {
+                "architecture": "x64",
+                "versions": {
+                    "SP1": "https://drive.massgrave.dev/en_windows_7_professional_with_sp1_x64_dvd_u_676939.iso",
+                    "SP2": "https://drive.massgrave.dev/en_windows_7_professional_with_sp2_x64_dvd_342267.iso"
+                }
+            },
+            {
+                "architecture": "x86",
+                "versions": {
+                    "SP1": "https://drive.massgrave.dev/en_windows_7_professional_with_sp1_x86_dvd_u_677056.iso",
+                    "SP2": "https://drive.massgrave.dev/en_windows_7_professional_with_sp2_x86_dvd_342266.iso"
+                }
+            }
+        ]
     },
     {
         "windows_version": "Windows 8",
-        "architectures": {
-            "x64": "https://example.com/windows8_x64.iso",
-            "x86": "https://example.com/windows8_x86.iso"
-        }
-    },
-    {
-        "windows_version": "Windows 8.1",
-        "architectures": {
-            "x64": "https://example.com/windows81_x64.iso",
-            "x86": "https://example.com/windows81_x86.iso"
-        }
+        "editions": [
+            {
+                "architecture": "x64",
+                "versions": {
+                    "": "https://archive.org/download/HRMCCSAX64FREPTBRDV5/HRM_CCSA_X64FRE_PT-BR_DV5.ISO"
+                }
+            },
+            {
+                "architecture": "x86",
+                "versions": {
+                    "": "https://archive.org/download/HRMCCSAX64FREPTBRDV5/HRM_CCSA_X86FRE_PT-BR_DV5.ISO"
+                }
+            }
+        ]
     },
     {
         "windows_version": "Windows 10",
-        "architectures": {
-            "x64": "https://dw.uptodown.net/dwn/q35olBVO7eVEuA8NPKjmERLxfGbKU1y1NW6P3Iv7bVtOjW2dqYoYQblDa8GpaJ5xhSJp1CZsFb8wmKxFGu43bc2FQKEesL_Js0WBh26P26vZSPy7qcY-HPmYNYIk6uqi/4-zKnPl8GHCr-ln-dNAe83HLxyfL0ipiTJR_xJQEul-hwUeo2fKYX_pKUwFl1MFFnHgXXortoe-KFvYaqAx5aZ5zt0teWtCX5W3f7dZv8LTqc52mbE5AmOqdw3YqlFYF/ZLULwdBCAJadcoxMCfeoKH-zebQovdFoSd3RkycBXZVO5x-yYSsohIusOxlsBerweSfxvubYxfmXE1GOY5iPHoOC_GT3wW_0c9uqFxSILuM=/windows-10-22h2-build-19041.iso",
-            "x86": "https://example.com/windows10_x86.iso",
-            "ARM": "https://example.com/windows10_arm.iso"
-        }
-    },
-    {
-        "windows_version": "Windows 10X",
-        "architectures": {
-            "VirtualDisk HyperV": "https://example.com/windows10x_virtualdisk.iso"
-        }
+        "editions": [
+            {
+                "architecture": "x64",
+                "versions": {
+                    "22H2 Updated May 2024": "https://drive.massgrave.dev/en-us_windows_10_consumer_editions_version_22h2_updated_may_2024_x64_dvd_49ddadb6.iso"
+                }
+            },
+            {
+                "architecture": "x86",
+                "versions": {
+                    "22H2 Updated May 2024": "https://drive.massgrave.dev/en-us_windows_10_consumer_editions_version_22h2_updated_may_2024_x86_dvd_49ddadb6.iso"
+                }
+            },
+            {
+                "architecture": "ARM64",
+                "versions": {
+                    "": "https://drive.massgrave.dev/SW_DVD9_Win_Pro_10_22H2.15_Arm64_English_Pro_Ent_EDU_N_MLF_X23-67223.ISO"
+                }
+            }
+        ]
     },
     {
         "windows_version": "Windows 11",
-        "architectures": {
-            "x64": "https://dw.uptodown.net/dwn/q35olBVO7eVEuA8NPKjmERLxfGbKU1y1NW6P3Iv7bVvsXU03jMcq3ezs3cPYKLpcmzQDgNHeBSGrlgKuM8YE1m2Q2q796Gj1sJg0UsL643q3yKRXWOE4LcWdwvsDynjf/gVYQjlmnEcTq0PLxtkJ6ybKLKGhmxqKMYBYnRTnkUcy52Vg14TuIh1loEufqxt_Yx36DZRvQWygv5goyL0wSCn-gjSTjORRjjpZ8WLB2CL2W_CX6en2kvq-lofjmnSUZ/041K2fFBIu106xSfo9sYs3JUJnzOQL9jBfOwrR24wwct82jn0BfAG-epz8nQKK9yscagnWgAI7kTcehrG_NNCg==/windows-11-23h2.iso",
-            "ARM": "https://example.com/windows11_arm.iso"
-        }
+        "editions": [
+            {
+                "architecture": "x64",
+                "versions": {
+                    "23H2 Updated May 2024": "https://drive.massgrave.dev/en-us_windows_11_consumer_editions_version_23h2_updated_may_2024_x64_dvd_3eaf6ec8.iso"
+                }
+            },
+            {
+                "architecture": "ARM64",
+                "versions": {
+                    "": "https://drive.massgrave.dev/SW_DVD9_Win_Pro_11_23H2.2_Arm64_English_Pro_Ent_EDU_N_MLF_X23-68023.ISO"
+                }
+            }
+        ]
     }
 ]
