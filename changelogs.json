@@ -1,21 +1,30 @@
 {
-  "DevTest": {
-    "version": "Dev Version",
-    "date": "Dev Date",
-    "changes": [
-      "Initial release.",
-      "Added feature A.",
-      "Fixed bug X."
-    ],
-    "show_changelog": false
-  },
-  "1.0": {
-    "version": "1.0",
-    "date": "2023-06-14",
-    "changes": [
-      "Added Custom OS.",
-      "Improved interface."
-    ],
-    "show_changelog": true
+    "0.1": {
+      "version": "0.1",
+      "date": "2023-01-01",
+      "changes": [
+        "Initial release.",
+        "Added feature A.",
+        "Fixed bug X."
+      ],
+      "show_changelog": false
+    },
+    "0.2": {
+      "version": "0.2",
+      "date": "2023-01-02",
+      "changes": [
+        "Added feature B.",
+        "Improved performance."
+      ],
+      "show_changelog": false
+    },
+    "1.0": {
+      "version": "1.0",
+      "date": "2023-04-20",
+      "changes": [
+        "Added Custom OS.",
+        "Improved Interface."
+      ],
+      "show_changelog": true
+    }
   }
-}
