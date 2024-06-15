@@ -31,9 +31,9 @@ import sys
 import json
 import urllib.request
 import time
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QComboBox, QMessageBox, QTabWidget, QWidget, QVBoxLayout, QHBoxLayout, QFileDialog, QProgressBar, QLineEdit, QTextEdit, QDialog, QScrollArea
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QComboBox, QMessageBox, QTabWidget, QWidget, QVBoxLayout, QHBoxLayout, QFileDialog, QProgressBar, QLineEdit, QTextEdit, QDialog, QScrollArea, QAction
 from PyQt5.QtGui import QFont, QIcon
-from PyQt5.QtCore import Qt, QThread, pyqtSignal, QTimer, QUrl, QSettings
+from PyQt5.QtCore import Qt, QThread, pyqtSignal, QTimer, QUrl, QSettings, QDir
 from PyQt5.QtGui import QDesktopServices
 from qtmodern.styles import dark
 from qtmodern.windows import ModernWindow
@@ -103,11 +103,11 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.settings_file = 'config.json'  # Nome do arquivo de configuração JSON
-        self.settings = QSettings("MyCompany", "MyApp")
+        self.settings = QSettings("DRP Studios", "DRP")
 
         self.load_settings()
 
-        self.setWindowTitle('Download ISO do Windows')
+        self.setWindowTitle('DRP 1.0 - Pulse')
         self.setGeometry(200, 200, 600, 400)
 
         self.tab_widget = QTabWidget(self)
@@ -121,9 +121,57 @@ class MainWindow(QMainWindow):
         self.tab_widget.addTab(self.mod_os_tab, 'Mod OS')
         self.tab_widget.addTab(self.settings_tab, 'Settings')
 
-        QTimer.singleShot(100, self.check_and_display_changelog)
+        QTimer.singleShot(100, self.check_update_and_display_changelog)
 
         self.download_thread = None
+
+    def check_update_and_display_changelog(self):
+        url = 'https://raw.githubusercontent.com/SterTheStar/DRPBR/main/changelogs.json'
+
+        try:
+            with urllib.request.urlopen(url) as response:
+                content = response.read().decode()
+                changelogs = json.loads(content)
+
+                latest_version = max(changelogs.keys(), key=lambda v: Version(v))
+
+                if Version('1.0') < Version(latest_version):
+                    # Build the changelog text
+                    changelog_text = f"Version: {changelogs[latest_version]['version']}\n"
+                    changelog_text += f"Date: {changelogs[latest_version]['date']}\n\n"
+                    changelog_text += "Changes:\n"
+                    for change in changelogs[latest_version]['changes']:
+                        changelog_text += f"- {change}\n"
+
+                    # Check if update is needed
+                    if Version('1.0') < Version(latest_version):
+                        # Ask user if they want to update and show changelog
+                        reply = QMessageBox.question(self, 'Update Available',
+                                                     f"A new version ({latest_version}) is available.\n\n"
+                                                     f"Do you want to update and view changelog?\n\n"
+                                                     f"{changelog_text}",
+                                                     QMessageBox.Yes | QMessageBox.No)
+
+                        if reply == QMessageBox.Yes:
+                            # Proceed with update if user agrees
+                            update_link = changelogs[latest_version].get('update_link')
+                            if update_link:
+                                QDesktopServices.openUrl(QUrl(update_link))
+                        else:
+                            return
+                    else:
+                        # Version is up to date, show only changelog
+                        QMessageBox.information(self, 'Changelog',
+                                                f"Version: {changelogs[latest_version]['version']}\n"
+                                                f"Date: {changelogs[latest_version]['date']}\n\n"
+                                            f"Changes:\n"
+                                            f"{changelog_text}")
+                else:
+                    # No update available, inform the user
+                    QMessageBox.information(self, 'Up to Date', 'You are already using the latest version.')
+
+        except Exception as e:
+            QMessageBox.critical(self, 'Error', f'Failed to perform update or load changelog: {e}')
 
     def load_settings(self):
         self.settings.beginGroup("DownloadSettings")
@@ -131,11 +179,29 @@ class MainWindow(QMainWindow):
         self.download_speed = self.settings.value("download_speed", 0)
         self.settings.endGroup()
 
+        try:
+            with open(self.settings_file, 'r') as f:
+                json_data = json.load(f)
+                self.download_path = json_data.get('download_path', '')
+        except FileNotFoundError:
+            pass
+        except Exception as e:
+            print(f"Failed to load settings from JSON: {e}")
+
     def save_settings(self):
         self.settings.beginGroup("DownloadSettings")
         self.settings.setValue("download_path", self.download_path)
         self.settings.setValue("download_speed", self.download_speed)
         self.settings.endGroup()
+
+        self.save_settings_to_json()
+
+    def save_settings_to_json(self):
+        try:
+            with open(self.settings_file, 'w') as f:
+                json.dump({'download_path': self.download_path}, f, indent=4)
+        except Exception as e:
+            print(f"Failed to save settings to JSON: {e}")
 
     def create_os_tab(self, json_url, tab_name):
         tab = QWidget()
@@ -229,6 +295,7 @@ class MainWindow(QMainWindow):
         settings_layout.addWidget(download_path_label)
 
         self.download_path_edit = QLineEdit()
+        self.download_path_edit.setText(self.download_path)
         settings_layout.addWidget(self.download_path_edit)
 
         btn_choose_path = QPushButton('🔎', tab)
@@ -253,7 +320,6 @@ class MainWindow(QMainWindow):
         btn_license = QPushButton('License', tab)
         btn_license.setMinimumWidth(100)  # Definindo largura mínima
         bottom_layout.addWidget(btn_license)
-
 
         layout.addLayout(bottom_layout)
 
@@ -374,41 +440,6 @@ class MainWindow(QMainWindow):
                     if selected_version in version['versions']:
                         download_url = version['versions'][selected_version]
                         QDesktopServices.openUrl(QUrl(download_url))
-
-    def open_in_browser(self, combo_windows, combo_arch, combo_version, download_data):
-        selected_index = combo_windows.currentIndex()
-        selected_architecture = combo_arch.currentText()
-        selected_version = combo_version.currentText()
-
-        if selected_index >= 0 and selected_index < len(download_data):
-            versions = download_data[selected_index]['editions']
-            for version in versions:
-                if version['architecture'] == selected_architecture:
-                    if selected_version in version['versions']:
-                        download_url = version['versions'][selected_version]
-                        QDesktopServices.openUrl(QUrl(download_url))
-
-    def check_and_display_changelog(self):
-        url = 'https://raw.githubusercontent.com/SterTheStar/DRPBR/main/changelogs.json'
-
-        try:
-            with urllib.request.urlopen(url) as response:
-                content = response.read().decode()
-                changelogs = json.loads(content)
-
-                latest_version = max(changelogs.keys(), key=lambda v: Version(v))
-                changelog_info = changelogs[latest_version]
-
-                if changelog_info.get('show_changelog', False):
-                    changelog_text = f"Version: {changelog_info['version']}\n"
-                    changelog_text += f"Date: {changelog_info['date']}\n\n"
-                    changelog_text += "Changes:\n"
-                    for change in changelog_info['changes']:
-                        changelog_text += f"- {change}\n"
-
-                    QMessageBox.information(self, 'Changelog', changelog_text)
-        except Exception as e:
-            QMessageBox.critical(self, 'Error', f'Failed to load changelog: {e}')
 
     def load_data_from_json(self, url):
         try:
