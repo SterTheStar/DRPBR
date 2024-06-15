@@ -1,4 +1,7 @@
-# DRPBR
+![BANNER](https://github.com/SterTheStar/DRPBR/assets/151816213/016bfa8c-5dd8-432f-8f04-e6e3077b6a60)
+
+![BR](https://github.com/SterTheStar/DRPBR/assets/151816213/934b6083-3184-4d1b-91b8-5bb745b5337e)
+
 
 📁 **DRP (Downloadable Repository Program)**
 
@@ -26,6 +29,40 @@ O objetivo principal do DRP é fornecer uma ferramenta centralizada e eficiente 
 - **Eficiência:** Automatiza tarefas que normalmente requerem conhecimento técnico avançado.
 - **Versatilidade:** Suporta múltiplas versões do Windows, atendendo a uma variedade de necessidades.
 
+![EUA](https://github.com/SterTheStar/DRPBR/assets/151816213/231232a7-a40b-4f0b-add4-8ca6a8c2ac9d)
+
+📁 **DRP (Downloadable Repository Program)**
+
+**Project Description:**
+
+DRP is an application developed in Python using the PyQt5 framework, designed to simplify the process of downloading and creating bootable disks from ISO images of various Windows versions.
+
+**Key Features:**
+
+1. **Windows Version Selection:** Allows users to choose from various Windows versions available in an integrated repository.
+   
+2. **ISO Downloads:** Facilitates secure and reliable download of ISO images directly from the selected repository.
+
+3. **Bootable Disk Creation:** Provides functionality to create bootable disks from downloaded ISOs, making it simple to prepare bootable media.
+
+4. **Intuitive Interface:** Features an intuitive and user-friendly graphical interface designed to provide a smooth and accessible user experience.
+
+**Objective:**
+
+The main objective of DRP is to provide a centralized and efficient tool for users needing different versions of Windows for installation or system recovery purposes, all in a controlled and user-friendly environment.
+
+**Benefits:**
+
+- **Ease of Use:** Simple interface that guides the user through each step of the process.
+- **Efficiency:** Automates tasks that typically require advanced technical knowledge.
+- **Versatility:** Supports multiple Windows versions, catering to a variety of needs.
+
+**Future Implementations:**
+
+In the future, DRP may expand its features to include support for other operating systems or offer advanced customization options for bootable disks.
+
 **Futuras Implementações:**
 
 Futuramente, o DRP poderá expandir suas funcionalidades para incluir suporte a outros sistemas operacionais ou oferecer opções avançadas de personalização para os discos de boot.
+
+
