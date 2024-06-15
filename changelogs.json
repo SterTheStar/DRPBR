@@ -25,7 +25,7 @@
             "Added Custom OS.",
             "Improved Interface."
         ],
-        "show_changelog": false
-        "update_link": "https://github.com/SterTheStar/DRPBR"
+        "show_changelog": true
+        "update_link": "https://github.com/SterTheStar/DRPBR/"
     }
 }
