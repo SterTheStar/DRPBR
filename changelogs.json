@@ -26,15 +26,6 @@
             "Improved Interface."
         ],
         "show_changelog": false
-    },
-    "1.1": {
-        "version": "1.1",
-        "date": "2024-06-15",
-        "changes": [
-            "Bug fixes.",
-            "Security enhancements."
-        ],
-        "show_changelog": true,
-        "update_link": "https://example.com/update"
+        "update_link": "https://github.com/SterTheStar/DRPBR"
     }
 }
