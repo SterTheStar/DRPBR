@@ -35,6 +35,6 @@
             "Security enhancements."
         ],
         "show_changelog": true,
-        "update_link": "https://example.com/update"
+        "update_link": "https://example.com/update/"
     }
 }
