@@ -1,40 +1,24 @@
 {
-    "0.1": {
-        "version": "0.1",
-        "date": "2024-01-01",
-        "changes": [
-            "Initial release.",
-            "Added feature A.",
-            "Fixed bug X."
-        ],
-        "show_changelog": false
-    },
-    "0.2": {
-        "version": "0.2",
-        "date": "2024-01-02",
-        "changes": [
-            "Added feature B.",
-            "Improved performance."
-        ],
-        "show_changelog": false
-    },
-    "0.3": {
-        "version": "0.3",
-        "date": "2024-06-14",
-        "changes": [
-            "Added Custom OS.",
-            "Improved Interface."
-        ],
-        "show_changelog": false
-    },
     "1.0": {
         "version": "1.0",
-        "date": "2024-06-15",
+        "date": "2024-06-14",
         "changes": [
             "Bug fixes.",
-            "Security enhancements."
+            "Security enchancements."
+        ],
+        "show_changelog": false,
+        "update_link": "https://github.com/SterTheStar/DRPBR/releases/tag/DRP"
+    },
+    "1.1": {
+        "version": "1.1",
+        "date": "2024-06-15",
+        "changes": [
+            "Added themes support.",
+            "Added Pause and Resume button.",
+            "New dark interface.",
+            "Bug fixes."
         ],
         "show_changelog": true,
-        "update_link": "https://github.com/SterTheStar/DRPBR/"
+        "update_link": "https://github.com/SterTheStar/DRPBR/releases/tag/DRP"
     }
 }
