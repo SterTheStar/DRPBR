@@ -18,14 +18,23 @@
         ],
         "show_changelog": false
     },
-    "1.0": {
-        "version": "1.0",
+    "0.3": {
+        "version": "0.3",
         "date": "2024-06-14",
         "changes": [
             "Added Custom OS.",
             "Improved Interface."
         ],
-        "show_changelog": true,
-        "update_link": "https://github.com/SterTheStar/DRPBR/",
+        "show_changelog": false
     },
+    "1.0": {
+        "version": "1.0",
+        "date": "2024-06-15",
+        "changes": [
+            "Bug fixes.",
+            "Security enhancements."
+        ],
+        "show_changelog": true,
+        "update_link": "https://example.com/update"
+    }
 }
