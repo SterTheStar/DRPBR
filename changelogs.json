@@ -18,7 +18,18 @@
             "New dark and pride interface.",
             "Bug fixes."
         ],
-        "show_changelog": true,
+        "show_changelog": false,
         "update_link": "https://github.com/SterTheStar/DRPBR/releases/"
+    },
+    "1.2": {
+        "version": "1.2",
+        "date": "2024-06-16",
+        "changes": [
+            "Implemented download path verification.",
+            "Enhanced user guidance for download setup.",
+            "Introduced new themes and fixed bugs."
+        ],
+        "show_changelog": true,
+        "update_link": "https://github.com/SterTheStar/DRPBR/releases"
     }
 }
