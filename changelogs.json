@@ -29,7 +29,16 @@
             "Enhanced user guidance for download setup.",
             "Introduced new themes and fixed bugs."
         ],
+        "show_changelog": false,
+        "update_link": "https://github.com/SterTheStar/DRPBR/releases"
+    },
+    "1.2.1": {
+        "version": "1.2.1",
+        "date": "2024-06-16",
+        "changes": [
+            "Fixed bugs"
+        ],
         "show_changelog": true,
-        "update_link": "https://github.com/SterTheStar/DRPBR/releases/"
+        "update_link": "https://github.com/SterTheStar/DRPBR/releases"
     }
 }
